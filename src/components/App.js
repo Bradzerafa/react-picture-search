@@ -1,41 +1,33 @@
-import React from 'react';
-import axios from 'axios';
-import SearchBar from './SearchBar';
-import ImageList from './ImageList';
+import React from "react";
+import axios from "axios";
+import SearchBar from "./SearchBar";
+import ImageList from "./ImageList";
 
+// USER MUST ADD API KEY!
 
-// USER MUST ADD API KEY! 
-
-class App extends React.Component{
+class App extends React.Component {
   state = { images: [] };
 
-
-  onSearchSubmit = async (term) => {
-    const response =  await axios.get('https://api.unsplash.com/search/photos', {
-      params: {query: term},
+  onSearchSubmit = async term => {
+    const response = await axios.get("https://api.unsplash.com/search/photos", {
+      params: { query: term },
       headers: {
-        Authorization: 
-        // ADD API KEY AFTER 'CLient-ID'!
-          'Client-ID '
+        Authorization:
+          // ADD API KEY AFTER 'Client-ID'!
+          "Client-ID "
       }
     });
-    this.setState({images: response.data.results});
-    
-  }
+    this.setState({ images: response.data.results });
+  };
 
-
-
-  render(){
+  render() {
     return (
-     <div className="ui container" style={{marginTop: '10px'}}>
-       <SearchBar onSubmit={this.onSearchSubmit} />
-       <ImageList images={this.state.images} />
-
-     </div>
-  );
+      <div className="ui container" style={{ marginTop: "10px" }}>
+        <SearchBar onSubmit={this.onSearchSubmit} />
+        <ImageList images={this.state.images} />
+      </div>
+    );
   }
 }
-
-
 
 export default App;
