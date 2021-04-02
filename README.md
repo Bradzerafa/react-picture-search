@@ -1,6 +1,20 @@
-# ReactPictureApp
-This app will allow the user to search for pictures from an API.
+# React Picture App:
+View project: https://eager-yalow-8c20d9.netlify.app/
 
-NOTE: To use this app you must put your own API key into the APP.js file.
+## Project Description:
+The React based picture app allows users to search a topic they want and obtain images on that topic through the unsplash API. This project is based on a Udemy course "React-Redux".
 
-The project is from this Udemy course: https://www.udemy.com/react-redux/learn/v4/content
+## Notable things done:
+- Responsive Design
+- ES6 Syntax
+- ReactJS
+- Unsplash API called with AXIOS
+
+
+## Technologies Used:
+### Front-End:
+- HTML
+- CSS
+- Javascript (ReactJS)
+### Hosting:
+- Netlify
