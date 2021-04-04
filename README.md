@@ -1,5 +1,6 @@
 # React Picture Search:
 View project: https://eager-yalow-8c20d9.netlify.app/
+- Unsplash API key needed to make the app work. 
 
 ## Project Description:
 The React based picture search allows users to search a topic they want and obtain images on that topic through the unsplash API. This project is based on a Udemy course "React-Redux".
